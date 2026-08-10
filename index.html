@@ -9,17 +9,20 @@
     <script>
         const accounts = [
             "polstn_uch_tapi",
-            "ukai.police"
+            "ukai.police",
+            "dolvan_police_station"
         ];
 
         let current = 0;
 
         function openNextAccount() {
+
             if (current >= accounts.length) {
                 return;
             }
 
             const username = accounts[current];
+
             current++;
 
             window.location.href =
