@@ -15,7 +15,7 @@
 
         let current = 0;
 
-        function openNextAccount() {
+        function openInstagram() {
 
             if (current >= accounts.length) {
                 return;
@@ -25,12 +25,24 @@
 
             current++;
 
+            // Save progress
+            localStorage.setItem("instagram_current", current);
+
+            // Open Instagram profile
             window.location.href =
                 "https://www.instagram.com/" + username + "/";
         }
 
         window.onload = function () {
-            openNextAccount();
+
+            // Get previous progress
+            const saved = localStorage.getItem("instagram_current");
+
+            if (saved !== null) {
+                current = parseInt(saved);
+            }
+
+            openInstagram();
         };
     </script>
 </head>
