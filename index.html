@@ -1,267 +1,1093 @@
-```html
-<!-- ========================= -->
-<!-- POLICE STATIONS -->
-<!-- ========================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="section-title">
-    Police Stations
-</div>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Tapi District Police - Official Social Media Accounts
+    </title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+
+            min-height: 100vh;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #f2f2f2;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .card {
+            width: 100%;
+
+            background: #ffffff;
+
+            padding: 35px 25px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ========================= */
+        /* HEADER */
+        /* ========================= */
+
+        .logo {
+            font-size: 52px;
+
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+
+            font-size: 26px;
+
+            line-height: 1.3;
+
+            color: #222;
+        }
+
+        .department {
+            margin-top: 8px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            color: #555;
+        }
+
+        .subtitle {
+            margin: 18px 0 30px;
+
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+        /* ========================= */
+        /* PLATFORM SECTION */
+        /* ========================= */
+
+        .platform-section {
+            margin-top: 35px;
+        }
+
+        .platform-header {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 15px;
+
+            padding: 13px 15px;
+
+            border-radius: 12px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            text-align: left;
+        }
+
+        .instagram-header {
+            background: #fce4ec;
+
+            color: #c2185b;
+        }
+
+        .facebook-header {
+            background: #e7f0ff;
+
+            color: #1877f2;
+        }
+
+        .platform-icon {
+            font-size: 23px;
+        }
+
+        /* ========================= */
+        /* ACCOUNT CARD */
+        /* ========================= */
+
+        .account {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 16px;
+
+            margin: 12px 0;
+
+            background: #fafafa;
+
+            border: 1px solid #e2e2e2;
+
+            border-radius: 14px;
+
+            transition: 0.2s;
+        }
+
+        .account:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.07);
+        }
+
+        .account-info {
+            flex: 1;
+
+            min-width: 0;
+
+            text-align: left;
+        }
+
+        .account-name {
+            font-size: 15px;
+
+            font-weight: bold;
+
+            color: #222;
+
+            margin-bottom: 5px;
+        }
+
+        .username {
+            font-size: 13px;
+
+            color: #777;
+
+            word-break: break-word;
+        }
+
+        /* ========================= */
+        /* BUTTON */
+        /* ========================= */
+
+        .social-btn {
+            display: inline-block;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            padding: 10px 16px;
+
+            border-radius: 9px;
+
+            font-weight: bold;
+
+            font-size: 13px;
+
+            white-space: nowrap;
+
+            transition: 0.2s;
+        }
+
+        .social-btn:hover {
+            opacity: 0.85;
+
+            transform: scale(1.03);
+        }
+
+        .instagram-btn {
+            background: #E1306C;
+        }
+
+        .facebook-btn {
+            background: #1877F2;
+        }
+
+        /* ========================= */
+        /* NOT AVAILABLE */
+        /* ========================= */
+
+        .not-available {
+            background: #eeeeee;
+
+            color: #888888;
+
+            cursor: default;
+
+            pointer-events: none;
+        }
+
+        /* ========================= */
+        /* DIVIDER */
+        /* ========================= */
+
+        .divider {
+            margin: 40px 0 10px;
+
+            border-top: 1px solid #eeeeee;
+        }
+
+        /* ========================= */
+        /* FOOTER */
+        /* ========================= */
+
+        .footer {
+            margin-top: 35px;
+
+            padding-top: 18px;
+
+            border-top: 1px solid #eeeeee;
+
+            font-size: 12px;
+
+            color: #999999;
+
+            line-height: 1.7;
+        }
+
+        /* ========================= */
+        /* MOBILE */
+        /* ========================= */
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 12px;
+            }
+
+            .card {
+                padding: 28px 16px;
+            }
+
+            h1 {
+                font-size: 23px;
+            }
+
+            .department {
+                font-size: 15px;
+            }
+
+            .account {
+                padding: 14px;
+
+                gap: 10px;
+            }
+
+            .account-name {
+                font-size: 14px;
+            }
+
+            .username {
+                font-size: 12px;
+            }
+
+            .social-btn {
+                padding: 9px 12px;
+
+                font-size: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
 
 
-<!-- Vyara Police Station -->
+<body>
 
-<div class="account">
 
-    <div class="account-info">
+<div class="container">
 
-        <div class="account-name">
-            Vyara Police Station
+<div class="card">
+
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <div class="logo">
+        👮‍♂️
+    </div>
+
+    <h1>
+        Tapi District Police
+    </h1>
+
+    <div class="department">
+        Official Social Media Accounts
+    </div>
+
+    <p class="subtitle">
+        Follow the official social media accounts of
+        Tapi District Police Department for official
+        updates, public awareness campaigns and
+        important information.
+    </p>
+
+
+
+    <!-- ================================================= -->
+    <!-- INSTAGRAM -->
+    <!-- ================================================= -->
+
+    <div class="platform-section">
+
+        <div class="platform-header instagram-header">
+
+            <span class="platform-icon">
+                📷
+            </span>
+
+            <span>
+                Official Instagram Accounts
+            </span>
+
         </div>
 
-        <div class="username">
-            Instagram account not provided
+
+        <!-- Tapi District Police -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Tapi District Police
+                </div>
+
+                <div class="username">
+                    @tapipolice
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/tapipolice/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Cyber Crime Tapi -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Cyber Crime Police Station, Tapi
+                </div>
+
+                <div class="username">
+                    @cybercrimetapi
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/cybercrimetapi/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Nizar Division -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Nizar Division Tapi Police
+                </div>
+
+                <div class="username">
+                    @nizar_division_tapi_police
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/nizar_division_tapi_police/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Vyara -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Vyara Police Station
+                </div>
+
+                <div class="username">
+                    Instagram account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Songadh -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Songadh Police Station
+                </div>
+
+                <div class="username">
+                    @songadh.police.station
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/songadh.police.station/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Dolvan -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Dolvan Police Station
+                </div>
+
+                <div class="username">
+                    @dolvan_police_station
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/dolvan_police_station/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Valod -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Valod Police Station
+                </div>
+
+                <div class="username">
+                    @valod_police_station_100
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/valod_police_station_100/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Kakrapar -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Kakrapar Police Station
+                </div>
+
+                <div class="username">
+                    @kakrapar_police_station
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/kakrapar_police_station/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Uchchhal -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Uchchhal Police Station
+                </div>
+
+                <div class="username">
+                    @polstn_uch_tapi
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/polstn_uch_tapi/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Ukai -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Ukai Police Station
+                </div>
+
+                <div class="username">
+                    @ukai.police
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/ukai.police/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Nizar -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Nizar Police Station
+                </div>
+
+                <div class="username">
+                    @nizar_police_station
+                </div>
+
+            </div>
+
+            <a
+                class="social-btn instagram-btn"
+                href="https://www.instagram.com/nizar_police_station/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+
+        <!-- Kukarmunda -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Kukarmunda Police Station
+                </div>
+
+                <div class="username">
+                    Instagram account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Mahila -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Mahila Police Station
+                </div>
+
+                <div class="username">
+                    Instagram account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
         </div>
 
     </div>
 
-    <span class="follow-btn not-available">
-        Not Available
-    </span>
-
-</div>
 
 
-<!-- Songadh Police Station -->
+    <!-- ================================================= -->
+    <!-- DIVIDER -->
+    <!-- ================================================= -->
 
-<div class="account">
+    <div class="divider"></div>
 
-    <div class="account-info">
 
-        <div class="account-name">
-            Songadh Police Station
+
+    <!-- ================================================= -->
+    <!-- FACEBOOK -->
+    <!-- ================================================= -->
+
+    <div class="platform-section">
+
+        <div class="platform-header facebook-header">
+
+            <span class="platform-icon">
+                👍
+            </span>
+
+            <span>
+                Official Facebook Accounts
+            </span>
+
         </div>
 
-        <div class="username">
-            @songadh.police.station
+
+        <!-- Tapi District Police -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Tapi District Police
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Cyber Crime -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Cyber Crime Police Station, Tapi
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Nizar Division -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Nizar Division Tapi Police
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Vyara -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Vyara Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Songadh -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Songadh Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Dolvan -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Dolvan Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Valod -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Valod Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Kakrapar -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Kakrapar Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Uchchhal -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Uchchhal Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Ukai -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Ukai Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Nizar -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Nizar Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Kukarmunda -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Kukarmunda Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
+        </div>
+
+
+        <!-- Mahila -->
+
+        <div class="account">
+
+            <div class="account-info">
+
+                <div class="account-name">
+                    Mahila Police Station
+                </div>
+
+                <div class="username">
+                    Facebook account not provided
+                </div>
+
+            </div>
+
+            <span class="social-btn not-available">
+                Not Available
+            </span>
+
         </div>
 
     </div>
 
-    <a
-        class="follow-btn"
-        href="https://www.instagram.com/songadh.police.station/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Follow
-    </a>
-
-</div>
 
 
-<!-- Dolvan Police Station -->
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
 
-<div class="account">
+    <div class="footer">
 
-    <div class="account-info">
+        Official Social Media • Tapi District Police
 
-        <div class="account-name">
-            Dolvan Police Station
-        </div>
+        <br>
 
-        <div class="username">
-            @dolvan_police_station
-        </div>
+        Tapi District, Gujarat
 
     </div>
 
-    <a
-        class="follow-btn"
-        href="https://www.instagram.com/dolvan_police_station/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Follow
-    </a>
+
+</div>
 
 </div>
 
 
-<!-- Valod Police Station -->
+</body>
 
-<div class="account">
-
-    <div class="account-info">
-
-        <div class="account-name">
-            Valod Police Station
-        </div>
-
-        <div class="username">
-            @valod_police_station_100
-        </div>
-
-    </div>
-
-    <a
-        class="follow-btn"
-        href="https://www.instagram.com/valod_police_station_100/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Follow
-    </a>
-
-</div>
-
-
-<!-- Kakrapar Police Station -->
-
-<div class="account">
-
-    <div class="account-info">
-
-        <div class="account-name">
-            Kakrapar Police Station
-        </div>
-
-        <div class="username">
-            @kakrapar_police_station
-        </div>
-
-    </div>
-
-    <a
-        class="follow-btn"
-        href="https://www.instagram.com/kakrapar_police_station/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Follow
-    </a>
-
-</div>
-
-
-<!-- Uchchhal Police Station -->
-
-<div class="account">
-
-    <div class="account-info">
-
-        <div class="account-name">
-            Uchchhal Police Station
-        </div>
-
-        <div class="username">
-            @polstn_uch_tapi
-        </div>
-
-    </div>
-
-    <a
-        class="follow-btn"
-        href="https://www.instagram.com/polstn_uch_tapi/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Follow
-    </a>
-
-</div>
-
-
-<!-- Ukai Police Station -->
-
-<div class="account">
-
-    <div class="account-info">
-
-        <div class="account-name">
-            Ukai Police Station
-        </div>
-
-        <div class="username">
-            @ukai.police
-        </div>
-
-    </div>
-
-    <a
-        class="follow-btn"
-        href="https://www.instagram.com/ukai.police/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Follow
-    </a>
-
-</div>
-
-
-<!-- Nizar Police Station -->
-
-<div class="account">
-
-    <div class="account-info">
-
-        <div class="account-name">
-            Nizar Police Station
-        </div>
-
-        <div class="username">
-            @nizar_police_station
-        </div>
-
-    </div>
-
-    <a
-        class="follow-btn"
-        href="https://www.instagram.com/nizar_police_station/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Follow
-    </a>
-
-</div>
-
-
-<!-- Kukarmunda Police Station -->
-
-<div class="account">
-
-    <div class="account-info">
-
-        <div class="account-name">
-            Kukarmunda Police Station
-        </div>
-
-        <div class="username">
-            Instagram account not provided
-        </div>
-
-    </div>
-
-    <span class="follow-btn not-available">
-        Not Available
-    </span>
-
-</div>
-
-
-<!-- Mahila Police Station -->
-
-<div class="account">
-
-    <div class="account-info">
-
-        <div class="account-name">
-            Mahila Police Station
-        </div>
-
-        <div class="username">
-            Instagram account not provided
-        </div>
-
-    </div>
-
-    <span class="follow-btn not-available">
-        Not Available
-    </span>
-
-</div>
-```
+</html>
