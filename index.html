@@ -4,49 +4,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Instagram</title>
+    <title>Follow Us on Instagram</title>
 
-    <script>
-        const accounts = [
-            "polstn_uch_tapi",
-            "ukai.police",
-            "dolvan_police_station"
-        ];
-
-        let current = 0;
-
-        function openInstagram() {
-
-            if (current >= accounts.length) {
-                return;
-            }
-
-            const username = accounts[current];
-
-            current++;
-
-            // Save progress
-            localStorage.setItem("instagram_current", current);
-
-            // Open Instagram profile
-            window.location.href =
-                "https://www.instagram.com/" + username + "/";
+    <style>
+        * {
+            box-sizing: border-box;
         }
 
-        window.onload = function () {
+        body {
+            margin: 0;
+            min-height: 100vh;
 
-            // Get previous progress
-            const saved = localStorage.getItem("instagram_current");
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            if (saved !== null) {
-                current = parseInt(saved);
-            }
+            font-family: Arial, sans-serif;
 
-            openInstagram();
-        };
-    </script>
+            background: #f5f5f5;
+
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 430px;
+
+            background: white;
+
+            border-radius: 24px;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        }
+
+        .logo {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+
+            font-size: 27px;
+
+            color: #222;
+        }
+
+        .subtitle {
+            color: #777;
+
+            line-height: 1.5;
+
+            margin: 10px 0 30px;
+        }
+
+        .account {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 16px;
+
+            margin: 15px 0;
+
+            border: 1px solid #e5e5e5;
+
+            border-radius: 16px;
+
+            background: #fafafa;
+        }
+
+        .account-info {
+            text-align: left;
+        }
+
+        .name {
+            font-weight: bold;
+
+            font-size: 16px;
+
+            color: #222;
+        }
+
+        .username {
+            margin-top: 5px;
+
+            font-size: 14px;
+
+            color: #777;
+        }
+
+        .follow {
+            background: #E1306C;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 11px 18px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+            white-space: nowrap;
+        }
+
+        .follow:hover {
+            opacity: 0.85;
+        }
+
+        .footer {
+            margin-top: 25px;
+
+            font-size: 12px;
+
+            color: #999;
+        }
+    </style>
 </head>
 
 <body>
+
+<div class="card">
+
+    <div class="logo">📷</div>
+
+    <h1>Follow Us on Instagram</h1>
+
+    <p class="subtitle">
+        Follow our official Instagram accounts
+        for updates and information.
+    </p>
+
+
+    <!-- Uchchhal Police -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="name">
+                Uchchhal Police
+            </div>
+
+            <div class="username">
+                @polstn_uch_tapi
+            </div>
+
+        </div>
+
+        <a
+            class="follow"
+            href="https://www.instagram.com/polstn_uch_tapi/"
+            target="_blank"
+            rel="noopener">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Ukai Police -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="name">
+                Ukai Police
+            </div>
+
+            <div class="username">
+                @ukai.police
+            </div>
+
+        </div>
+
+        <a
+            class="follow"
+            href="https://www.instagram.com/ukai.police/"
+            target="_blank"
+            rel="noopener">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Dolvan Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="name">
+                Dolvan Police Station
+            </div>
+
+            <div class="username">
+                @dolvan_police_station
+            </div>
+
+        </div>
+
+        <a
+            class="follow"
+            href="https://www.instagram.com/dolvan_police_station/"
+            target="_blank"
+            rel="noopener">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <div class="footer">
+        Official Instagram Accounts
+    </div>
+
+</div>
+
 </body>
 </html>
