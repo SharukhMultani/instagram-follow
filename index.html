@@ -28,7 +28,7 @@
 
         .card {
             width: 100%;
-            max-width: 460px;
+            max-width: 520px;
 
             background: #ffffff;
 
@@ -94,6 +94,14 @@
             border: 1px solid #e2e2e2;
 
             border-radius: 14px;
+
+            transition: 0.2s;
+        }
+
+        .account:hover {
+            transform: translateY(-2px);
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
         }
 
         .account-info {
@@ -116,6 +124,8 @@
             font-size: 14px;
 
             color: #777;
+
+            word-break: break-word;
         }
 
         .follow-btn {
@@ -146,6 +156,36 @@
             transform: scale(1.03);
         }
 
+        .not-available {
+            background: #eeeeee;
+
+            color: #888;
+
+            cursor: default;
+
+            pointer-events: none;
+        }
+
+        .section-title {
+            margin: 30px 0 12px;
+
+            padding-bottom: 8px;
+
+            border-bottom: 1px solid #eeeeee;
+
+            text-align: left;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            color: #777;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+        }
+
         .footer {
             margin-top: 28px;
 
@@ -156,6 +196,8 @@
             font-size: 12px;
 
             color: #999;
+
+            line-height: 1.6;
         }
 
         /* Mobile */
@@ -187,119 +229,424 @@
 
 <body>
 
-    <div class="card">
+<div class="card">
 
-        <div class="logo">
-            📷
-        </div>
+    <div class="logo">
+        📷
+    </div>
 
-        <h1>
-            Tapi District Police
-        </h1>
+    <h1>
+        Tapi District Police
+    </h1>
 
-        <div class="department">
-            Official Instagram Accounts
-        </div>
+    <div class="department">
+        Official Instagram Accounts
+    </div>
 
-        <p class="subtitle">
-            Follow the official Instagram accounts of
-            Tapi District Police Department for official
-            updates, public awareness and important information.
-        </p>
+    <p class="subtitle">
+        Follow the official Instagram accounts of
+        Tapi District Police Department for official
+        updates, public awareness and important information.
+    </p>
 
 
-        <!-- Uchchhal Police -->
+    <!-- ========================= -->
+    <!-- DISTRICT / SPECIALIZED -->
+    <!-- ========================= -->
 
-        <div class="account">
+    <div class="section-title">
+        District & Specialized Accounts
+    </div>
 
-            <div class="account-info">
 
-                <div class="account-name">
-                    Uchchhal Police
-                </div>
+    <!-- Tapi District Police -->
 
-                <div class="username">
-                    @polstn_uch_tapi
-                </div>
+    <div class="account">
 
+        <div class="account-info">
+
+            <div class="account-name">
+                Tapi District Police
             </div>
 
-            <a
-                class="follow-btn"
-                href="https://www.instagram.com/polstn_uch_tapi/"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                Follow
-
-            </a>
-
-        </div>
-
-
-        <!-- Ukai Police -->
-
-        <div class="account">
-
-            <div class="account-info">
-
-                <div class="account-name">
-                    Ukai Police
-                </div>
-
-                <div class="username">
-                    @ukai.police
-                </div>
-
+            <div class="username">
+                @tapipolice
             </div>
 
-            <a
-                class="follow-btn"
-                href="https://www.instagram.com/ukai.police/"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                Follow
-
-            </a>
-
         </div>
 
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/tapipolice/"
+            target="_blank"
+            rel="noopener noreferrer">
 
-        <!-- Dolvan Police Station -->
+            Follow
 
-        <div class="account">
-
-            <div class="account-info">
-
-                <div class="account-name">
-                    Dolvan Police Station
-                </div>
-
-                <div class="username">
-                    @dolvan_police_station
-                </div>
-
-            </div>
-
-            <a
-                class="follow-btn"
-                href="https://www.instagram.com/dolvan_police_station/"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                Follow
-
-            </a>
-
-        </div>
-
-
-        <div class="footer">
-            Official Social Media • Tapi District Police
-        </div>
+        </a>
 
     </div>
+
+
+    <!-- Cyber Crime Tapi -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Cyber Crime Police Station, Tapi
+            </div>
+
+            <div class="username">
+                @cybercrimetapi
+            </div>
+
+        </div>
+
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/cybercrimetapi/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Nizar Division -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Nizar Division Tapi Police
+            </div>
+
+            <div class="username">
+                @nizar_division_tapi_police
+            </div>
+
+        </div>
+
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/nizar_division_tapi_police/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- POLICE STATIONS -->
+    <!-- ========================= -->
+
+    <div class="section-title">
+        Police Stations
+    </div>
+
+
+    <!-- Vyara Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Vyara Police Station
+            </div>
+
+            <div class="username">
+                Instagram account not provided
+            </div>
+
+        </div>
+
+        <span class="follow-btn not-available">
+            Not Available
+        </span>
+
+    </div>
+
+
+    <!-- Songadh Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Songadh Police Station
+            </div>
+
+            <div class="username">
+                @songadh.police.station
+            </div>
+
+        </div>
+
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/songadh.police.station/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Dolvan Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Dolvan Police Station
+            </div>
+
+            <div class="username">
+                @dolvan_police_station
+            </div>
+
+        </div>
+
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/dolvan_police_station/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Valod Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Valod Police Station
+            </div>
+
+            <div class="username">
+                @valod_police_station_100
+            </div>
+
+        </div>
+
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/valod_police_station_100/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Kakrapar Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Kakrapar Police Station
+            </div>
+
+            <div class="username">
+                @kakrapar_police_station
+            </div>
+
+        </div>
+
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/kakrapar_police_station/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Uchchhal Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Uchchhal Police Station
+            </div>
+
+            <div class="username">
+                @polstn_uch_tapi
+            </div>
+
+        </div>
+
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/polstn_uch_tapi/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Ukai Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Ukai Police Station
+            </div>
+
+            <div class="username">
+                @ukai.police
+            </div>
+
+        </div>
+
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/ukai.police/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Nizar Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Nizar Police Station
+            </div>
+
+            <div class="username">
+                @nizar_police_station
+            </div>
+
+        </div>
+
+        <a
+            class="follow-btn"
+            href="https://www.instagram.com/nizar_police_station/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Follow
+
+        </a>
+
+    </div>
+
+
+    <!-- Kukarmunda Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Kukarmunda Police Station
+            </div>
+
+            <div class="username">
+                Instagram account not provided
+            </div>
+
+        </div>
+
+        <span class="follow-btn not-available">
+            Not Available
+        </span>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- WOMEN POLICE STATION -->
+    <!-- ========================= -->
+
+    <div class="section-title">
+        Other Police Units
+    </div>
+
+
+    <!-- Mahila Police Station -->
+
+    <div class="account">
+
+        <div class="account-info">
+
+            <div class="account-name">
+                Mahila Police Station
+            </div>
+
+            <div class="username">
+                Instagram account not provided
+            </div>
+
+        </div>
+
+        <span class="follow-btn not-available">
+            Not Available
+        </span>
+
+    </div>
+
+
+    <div class="footer">
+
+        Official Social Media • Tapi District Police
+
+        <br>
+
+        Tapi District, Gujarat
+
+    </div>
+
+</div>
 
 </body>
 </html>
