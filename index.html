@@ -2,12 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tapi District Police - Official Social Media Accounts</title>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Tapi District Police - Official Social Media Accounts
+    </title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -16,8 +23,14 @@
             margin: 0;
             padding: 20px;
             min-height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             background: #f2f2f2;
+
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -30,14 +43,22 @@
 
         .card {
             width: 100%;
+
             background: #ffffff;
+
             padding: 35px 25px;
+
             border-radius: 20px;
+
             text-align: center;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.12);
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         .logo {
             font-size: 52px;
@@ -46,26 +67,34 @@
 
         h1 {
             margin: 0;
+
             font-size: 26px;
             line-height: 1.3;
+
             color: #222;
         }
 
         .department {
             margin-top: 8px;
+
             font-size: 16px;
             font-weight: bold;
+
             color: #555;
         }
 
         .subtitle {
             margin: 18px 0 30px;
+
             color: #777;
+
             font-size: 14px;
             line-height: 1.6;
         }
 
-        /* PLATFORM */
+        /* =========================
+           PLATFORM
+        ========================= */
 
         .platform-section {
             margin-top: 35px;
@@ -74,12 +103,18 @@
         .platform-header {
             display: flex;
             align-items: center;
+
             gap: 10px;
+
             margin-bottom: 15px;
+
             padding: 13px 15px;
+
             border-radius: 12px;
+
             font-size: 17px;
             font-weight: bold;
+
             text-align: left;
         }
 
@@ -97,61 +132,91 @@
             font-size: 23px;
         }
 
-        /* ACCOUNT */
+        /* =========================
+           ACCOUNT CARD
+        ========================= */
 
         .account {
             display: flex;
+
             align-items: center;
             justify-content: space-between;
+
             gap: 15px;
+
             padding: 16px;
+
             margin: 12px 0;
+
             background: #fafafa;
+
             border: 1px solid #e2e2e2;
+
             border-radius: 14px;
+
             transition: 0.2s;
         }
 
         .account:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.07);
         }
 
         .account-info {
             flex: 1;
+
             min-width: 0;
+
             text-align: left;
         }
 
         .account-name {
             font-size: 15px;
+
             font-weight: bold;
+
             color: #222;
+
             margin-bottom: 5px;
         }
 
         .username {
             font-size: 13px;
+
             color: #777;
+
             word-break: break-word;
         }
 
-        /* BUTTON */
+        /* =========================
+           BUTTON
+        ========================= */
 
         .social-btn {
             display: inline-block;
+
             color: #ffffff;
+
             text-decoration: none;
+
             padding: 10px 16px;
+
             border-radius: 9px;
+
             font-weight: bold;
+
             font-size: 13px;
+
             white-space: nowrap;
+
             transition: 0.2s;
         }
 
         .social-btn:hover {
             opacity: 0.85;
+
             transform: scale(1.03);
         }
 
@@ -165,30 +230,47 @@
 
         .not-available {
             background: #eeeeee;
+
             color: #888888;
+
             cursor: default;
+
             pointer-events: none;
         }
 
-        /* DIVIDER */
+        /* =========================
+           DIVIDER
+        ========================= */
 
         .divider {
             margin: 40px 0 10px;
-            border-top: 1px solid #eeeeee;
+
+            border-top:
+                1px solid #eeeeee;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         .footer {
             margin-top: 35px;
+
             padding-top: 18px;
-            border-top: 1px solid #eeeeee;
+
+            border-top:
+                1px solid #eeeeee;
+
             font-size: 12px;
+
             color: #999999;
+
             line-height: 1.7;
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 480px) {
 
@@ -210,6 +292,7 @@
 
             .account {
                 padding: 14px;
+
                 gap: 10px;
             }
 
@@ -223,46 +306,60 @@
 
             .social-btn {
                 padding: 9px 12px;
+
                 font-size: 12px;
             }
         }
+
     </style>
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
+
 <div class="card">
 
-    <!-- HEADER -->
+
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <div class="logo">
         👮‍♂️
     </div>
 
+
     <h1>
         Tapi District Police
     </h1>
+
 
     <div class="department">
         Official Social Media Accounts
     </div>
 
+
     <p class="subtitle">
+
         Follow the official social media accounts of
         Tapi District Police Department for official
         updates, public awareness campaigns and
         important information.
+
     </p>
 
 
-    <!-- ================================================= -->
-    <!-- INSTAGRAM -->
-    <!-- ================================================= -->
+    <!-- =================================================
+         INSTAGRAM
+    ================================================= -->
 
     <div class="platform-section">
+
 
         <div class="platform-header instagram-header">
 
@@ -306,7 +403,7 @@
         </div>
 
 
-        <!-- Cyber Crime Tapi -->
+        <!-- Cyber Crime -->
 
         <div class="account">
 
@@ -647,6 +744,7 @@
 
         </div>
 
+
     </div>
 
 
@@ -655,11 +753,12 @@
     <div class="divider"></div>
 
 
-    <!-- ================================================= -->
-    <!-- FACEBOOK -->
-    <!-- ================================================= -->
+    <!-- =================================================
+         FACEBOOK
+    ================================================= -->
 
     <div class="platform-section">
+
 
         <div class="platform-header facebook-header">
 
@@ -1014,6 +1113,7 @@
 
         </div>
 
+
     </div>
 
 
@@ -1029,9 +1129,11 @@
 
     </div>
 
+
 </div>
 
 </div>
+
 
 </body>
 
