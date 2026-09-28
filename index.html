@@ -1,239 +1,144 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tapi District Police - Official Social Media Accounts</title>
+    <title>Tapi District Police - Official Social Media</title>
 
     <style>
         * {
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             margin: 0;
             padding: 20px;
-            min-height: 100vh;
-
-            font-family: Arial, Helvetica, sans-serif;
-
             background: #f2f2f2;
-
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .card {
-            width: 100%;
-
-            background: #ffffff;
-
-            padding: 40px 35px;
-
-            border-radius: 22px;
-
-            text-align: center;
-
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        .logo {
-            font-size: 52px;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            margin: 0;
-
-            font-size: 28px;
-            line-height: 1.3;
-
+            font-family: Arial, Helvetica, sans-serif;
             color: #222;
         }
 
-        .department {
-            margin-top: 8px;
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 25px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+        }
 
-            font-size: 16px;
-            font-weight: bold;
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
+        .header-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+            color: #222;
+        }
+
+        .header h2 {
+            margin: 8px 0;
+            font-size: 18px;
             color: #555;
+            font-weight: 600;
         }
 
-        .subtitle {
-            max-width: 620px;
-
-            margin: 18px auto 30px;
-
-            color: #777;
-
+        .header p {
+            margin: 12px auto 0;
+            max-width: 600px;
+            line-height: 1.6;
+            color: #666;
             font-size: 14px;
-
-            line-height: 1.7;
         }
 
-        /* =========================
-           PLATFORM
-        ========================= */
-
-        .platform-section {
-            margin-top: 35px;
+        .platform {
+            margin-top: 30px;
         }
 
-        .platform-header {
+        .platform-title {
             display: flex;
-
             align-items: center;
-
             gap: 10px;
-
-            margin-bottom: 15px;
-
-            padding: 14px 16px;
-
+            padding: 12px 15px;
             border-radius: 12px;
-
-            font-size: 17px;
-
+            font-size: 19px;
             font-weight: bold;
-
-            text-align: left;
+            margin-bottom: 12px;
         }
 
-        .instagram-header {
+        .instagram-title {
             background: #fce4ec;
             color: #c2185b;
         }
 
-        .facebook-header {
+        .facebook-title {
             background: #e7f0ff;
             color: #1877f2;
         }
 
-        .twitter-header {
+        .x-title {
             background: #e9f1f7;
             color: #111111;
         }
 
-        .platform-icon {
-            font-size: 23px;
-
-            width: 28px;
-
-            text-align: center;
-        }
-
-        /* =========================
-           ACCOUNT CARD
-        ========================= */
-
-        .account {
+        .account-card {
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
             gap: 15px;
-
-            padding: 16px 18px;
-
-            margin: 12px 0;
-
+            padding: 14px 16px;
+            margin-bottom: 10px;
             background: #fafafa;
-
-            border: 1px solid #e2e2e2;
-
-            border-radius: 14px;
-
-            transition: all 0.2s ease;
+            border: 1px solid #e5e5e5;
+            border-radius: 13px;
+            transition: 0.2s ease;
         }
 
-        .account:hover {
+        .account-card:hover {
             transform: translateY(-2px);
-
-            background: #ffffff;
-
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         .account-info {
             flex: 1;
-
-            min-width: 0;
-
-            text-align: left;
         }
 
         .account-name {
             font-size: 15px;
-
             font-weight: bold;
-
-            color: #222;
-
             margin-bottom: 5px;
         }
 
         .username {
             font-size: 13px;
-
             color: #777;
-
             word-break: break-word;
         }
 
-        /* =========================
-           BUTTON
-        ========================= */
-
-        .social-btn {
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            min-width: 90px;
-
+        .follow-btn {
+            flex-shrink: 0;
+            display: inline-block;
+            padding: 9px 16px;
+            border-radius: 8px;
             color: #ffffff;
-
             text-decoration: none;
-
-            padding: 10px 16px;
-
-            border-radius: 9px;
-
-            font-weight: bold;
-
             font-size: 13px;
-
-            white-space: nowrap;
-
-            transition: all 0.2s ease;
+            font-weight: bold;
+            transition: 0.2s ease;
         }
 
-        .social-btn:hover {
-            opacity: 0.88;
-
-            transform: scale(1.03);
+        .follow-btn:hover {
+            opacity: 0.85;
+            transform: translateY(-1px);
         }
 
         .instagram-btn {
@@ -244,128 +149,25 @@
             background: #1877f2;
         }
 
-        .twitter-btn {
+        .x-btn {
             background: #111111;
         }
 
-        /* =========================
-           DIVIDER
-        ========================= */
-
-        .divider {
-            margin: 40px 0 10px;
-
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
             border-top: 1px solid #eeeeee;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        .footer {
-            margin-top: 35px;
-
-            padding-top: 18px;
-
-            border-top: 1px solid #eeeeee;
-
-            font-size: 12px;
-
-            color: #999999;
-
-            line-height: 1.7;
-        }
-
-        .footer-title {
-            font-weight: bold;
-
             color: #777;
-
-            margin-bottom: 3px;
-        }
-
-        /* =========================
-           WEBSITE LINK
-        ========================= */
-
-        .website-link {
-            margin-top: 12px;
-        }
-
-        .website-link a {
-            color: #1877f2;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-            transition: 0.2s ease;
-        }
-
-        .website-link a:hover {
-            text-decoration: underline;
-
-            opacity: 0.8;
-        }
-
-        /* =========================
-           VISITOR COUNTER
-        ========================= */
-
-        .visitor-counter {
-            display: inline-block;
-
-            margin-top: 12px;
-
-            padding: 8px 16px;
-
-            background: #f5f5f5;
-
-            border: 1px solid #e2e2e2;
-
-            border-radius: 20px;
-
-            color: #666;
-
             font-size: 12px;
+            line-height: 1.8;
+        }
 
+        footer a {
+            color: #1877f2;
+            text-decoration: none;
             font-weight: bold;
         }
-
-        #visitorCount {
-            color: #222;
-
-            font-weight: bold;
-
-            margin-left: 3px;
-        }
-
-        /* =========================
-           DESKTOP
-        ========================= */
-
-        @media (min-width: 768px) {
-
-            .card {
-                padding: 45px 40px;
-            }
-
-            .account {
-                padding: 17px 20px;
-            }
-
-            .account-name {
-                font-size: 15px;
-            }
-
-            .username {
-                font-size: 13px;
-            }
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
 
         @media (max-width: 600px) {
 
@@ -374,1105 +176,503 @@
             }
 
             .container {
-                max-width: 100%;
-            }
-
-            .card {
-                padding: 28px 14px;
-
+                padding: 18px;
                 border-radius: 16px;
             }
 
-            .logo {
-                font-size: 44px;
+            .header h1 {
+                font-size: 25px;
             }
 
-            h1 {
-                font-size: 23px;
+            .header h2 {
+                font-size: 16px;
             }
 
-            .department {
-                font-size: 14px;
+            .account-card {
+                align-items: flex-start;
             }
 
-            .subtitle {
-                font-size: 13px;
-
-                margin: 15px auto 25px;
-            }
-
-            .platform-section {
-                margin-top: 28px;
-            }
-
-            .platform-header {
-                padding: 12px 13px;
-
-                font-size: 15px;
-            }
-
-            .platform-icon {
-                font-size: 20px;
-            }
-
-            .account {
-                padding: 13px;
-
-                gap: 10px;
-
-                border-radius: 12px;
-            }
-
-            .account-name {
-                font-size: 13px;
-
-                line-height: 1.4;
-            }
-
-            .username {
-                font-size: 11px;
-            }
-
-            .social-btn {
-                min-width: 75px;
-
-                padding: 9px 10px;
-
-                font-size: 11px;
-            }
-
-            .footer {
-                font-size: 11px;
-            }
-
-            .visitor-counter {
-                padding: 7px 12px;
-
-                font-size: 11px;
-            }
-        }
-
-        /* =========================
-           VERY SMALL MOBILE
-        ========================= */
-
-        @media (max-width: 380px) {
-
-            body {
-                padding: 7px;
-            }
-
-            .card {
-                padding: 24px 10px;
-            }
-
-            .account {
-                padding: 11px;
-            }
-
-            .account-name {
+            .follow-btn {
+                padding: 8px 12px;
                 font-size: 12px;
-            }
-
-            .username {
-                font-size: 10px;
-            }
-
-            .social-btn {
-                min-width: 68px;
-
-                padding: 8px 8px;
-
-                font-size: 10px;
             }
         }
     </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<div class="card">
+    <!-- Header -->
+    <div class="header">
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+        <div class="header-icon">👮‍♂️</div>
 
-    <div class="logo">
-        👮‍♂️
+        <h1>Tapi District Police</h1>
+
+        <h2>Official Social Media Accounts</h2>
+
+        <p>
+            Follow the official social media accounts of Tapi District Police
+            for verified updates, public awareness messages, safety information,
+            police activities and important announcements.
+        </p>
+
     </div>
 
-    <h1>
-        Tapi District Police
-    </h1>
 
-    <div class="department">
-        Official Social Media Accounts
-    </div>
+    <!-- Instagram -->
+    <div class="platform">
 
-    <p class="subtitle">
-        Follow the official social media accounts of
-        Tapi District Police Department for official
-        updates, public awareness campaigns and
-        important information.
-    </p>
-
-
-    <!-- =================================================
-         INSTAGRAM
-    ================================================= -->
-
-    <div class="platform-section">
-
-        <div class="platform-header instagram-header">
-
-            <span class="platform-icon">
-                📷
-            </span>
-
-            <span>
-                Official Instagram Accounts
-            </span>
-
+        <div class="platform-title instagram-title">
+            📷 Instagram
         </div>
 
 
-        <!-- Tapi District Police -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Tapi District Police
-                </div>
-
-                <div class="username">
-                    @tapipolice
-                </div>
-
+                <div class="account-name">Tapi District Police</div>
+                <div class="username">@tapipolice</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/tapipolice/"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Cyber Crime -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Cyber Crime Police Station, Tapi
-                </div>
-
-                <div class="username">
-                    @cybercrimetapi
-                </div>
-
+                <div class="account-name">Cyber Crime Police Station, Tapi</div>
+                <div class="username">@cybercrimetapi</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/cybercrimetapi/"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Nizar Division -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Nizar Division Tapi Police
-                </div>
-
-                <div class="username">
-                    @nizar_division_tapi_police
-                </div>
-
+                <div class="account-name">Nizar Division Tapi Police</div>
+                <div class="username">@nizar_division_tapi_police</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/nizar_division_tapi_police/"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Vyara -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Vyara Police Station
-                </div>
-
-                <div class="username">
-                    @vyara_police_station
-                </div>
-
+                <div class="account-name">Vyara Police Station</div>
+                <div class="username">@vyara_police_station</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/vyara_police_station?igsh=MXRmM2U2dGNsYm9raw=="
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Songadh -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Songadh Police Station
-                </div>
-
-                <div class="username">
-                    @songadh.police.station
-                </div>
-
+                <div class="account-name">Songadh Police Station</div>
+                <div class="username">@songadh.police.station</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/songadh.police.station"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Dolvan -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Dolvan Police Station
-                </div>
-
-                <div class="username">
-                    @dolvan_police_station
-                </div>
-
+                <div class="account-name">Dolvan Police Station</div>
+                <div class="username">@dolvan_police_station</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/dolvan_police_station?igsh=MXcyMWc0dWNyN3JwcQ=="
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Valod -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Valod Police Station
-                </div>
-
-                <div class="username">
-                    @valod_police_station_100
-                </div>
-
+                <div class="account-name">Valod Police Station</div>
+                <div class="username">@valod_police_station_100</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/valod_police_station_100"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Kakrapar -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Kakrapar Police Station
-                </div>
-
-                <div class="username">
-                    @kakrapar_police_station
-                </div>
-
+                <div class="account-name">Kakrapar Police Station</div>
+                <div class="username">@kakrapar_police_station</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/kakrapar_police_station"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Uchchhal -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Uchchhal Police Station
-                </div>
-
-                <div class="username">
-                    @polstn_uch_tapi
-                </div>
-
+                <div class="account-name">Uchchhal Police Station</div>
+                <div class="username">@polstn_uch_tapi</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/polstn_uch_tapi?igsh=aWNhMjNxeWM3MDV3"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Ukai -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Ukai Police Station
-                </div>
-
-                <div class="username">
-                    @ukai.police.station
-                </div>
-
+                <div class="account-name">Ukai Police Station</div>
+                <div class="username">@ukai.police.station</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/ukai.police.station"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Nizar Police Station -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Nizar Police Station
-                </div>
-
-                <div class="username">
-                    @nizar_police_station
-                </div>
-
+                <div class="account-name">Nizar Police Station</div>
+                <div class="username">@nizar_police_station</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/nizar_police_station?igsh=MTJndGk3YmVrcDM0eQ=="
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Kukarmunda -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Kukarmunda Police Station
-                </div>
-
-                <div class="username">
-                    @kukarmundapolice
-                </div>
-
+                <div class="account-name">Kukarmunda Police Station</div>
+                <div class="username">@kukarmundapolice</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/kukarmundapolice?igsh=MWc5bWw3ajNsbnk2eQ=="
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Mahila -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Mahila Police Station
-                </div>
-
-                <div class="username">
-                    @mahila_policestation_tapi
-                </div>
-
+                <div class="account-name">Mahila Police Station</div>
+                <div class="username">@mahila_policestation_tapi</div>
             </div>
 
             <a
-                class="social-btn instagram-btn"
                 href="https://www.instagram.com/mahila_policestation_tapi/?hl=en"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn instagram-btn">
                 Follow
-
             </a>
-
         </div>
 
     </div>
 
 
-    <div class="divider"></div>
+    <!-- Facebook -->
+    <div class="platform">
 
-
-    <!-- =================================================
-         FACEBOOK
-    ================================================= -->
-
-    <div class="platform-section">
-
-        <div class="platform-header facebook-header">
-
-            <span class="platform-icon">
-                👍
-            </span>
-
-            <span>
-                Official Facebook Accounts
-            </span>
-
+        <div class="platform-title facebook-title">
+            📘 Facebook
         </div>
 
 
-        <!-- Tapi District Police -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Tapi District Police
-                </div>
-
-                <div class="username">
-                    Facebook
-                </div>
-
+                <div class="account-name">Tapi District Police</div>
             </div>
 
             <a
-                class="social-btn facebook-btn"
                 href="https://www.facebook.com/tapipolice/"
                 target="_blank"
-                rel="noopener noreferrer">
-
-                Visit
-
+                class="follow-btn facebook-btn">
+                Follow
             </a>
-
         </div>
 
 
-        <!-- Vyara -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Vyara Police Station
-                </div>
-
-                <div class="username">
-                    Facebook
-                </div>
-
+                <div class="account-name">Vyara Police Station</div>
             </div>
 
             <a
-                class="social-btn facebook-btn"
                 href="https://www.facebook.com/share/1BMuPYXokS/"
                 target="_blank"
-                rel="noopener noreferrer">
-
-                Visit
-
+                class="follow-btn facebook-btn">
+                Follow
             </a>
-
         </div>
 
 
-        <!-- Songadh -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Songadh Police Station
-                </div>
-
-                <div class="username">
-                    Facebook
-                </div>
-
+                <div class="account-name">Songadh Police Station</div>
             </div>
 
             <a
-                class="social-btn facebook-btn"
                 href="https://www.facebook.com/profile.php?id=61571151565555"
                 target="_blank"
-                rel="noopener noreferrer">
-
-                Visit
-
+                class="follow-btn facebook-btn">
+                Follow
             </a>
-
         </div>
 
 
-        <!-- Valod -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Valod Police Station
-                </div>
-
-                <div class="username">
-                    Facebook
-                </div>
-
+                <div class="account-name">Valod Police Station</div>
             </div>
 
             <a
-                class="social-btn facebook-btn"
                 href="https://www.facebook.com/share/1GCFe89muD/"
                 target="_blank"
-                rel="noopener noreferrer">
-
-                Visit
-
+                class="follow-btn facebook-btn">
+                Follow
             </a>
-
         </div>
 
 
-        <!-- Uchchhal -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Uchchhal Police Station
-                </div>
-
-                <div class="username">
-                    Facebook
-                </div>
-
+                <div class="account-name">Uchchhal Police Station</div>
             </div>
 
             <a
-                class="social-btn facebook-btn"
                 href="https://www.facebook.com/profile.php?id=61570835476430"
                 target="_blank"
-                rel="noopener noreferrer">
-
-                Visit
-
+                class="follow-btn facebook-btn">
+                Follow
             </a>
-
         </div>
 
 
-        <!-- Ukai -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Ukai Police Station
-                </div>
-
-                <div class="username">
-                    Facebook
-                </div>
-
+                <div class="account-name">Ukai Police Station</div>
             </div>
 
             <a
-                class="social-btn facebook-btn"
                 href="https://www.facebook.com/profile.php?id=61577460045080&sk=about"
                 target="_blank"
-                rel="noopener noreferrer">
-
-                Visit
-
+                class="follow-btn facebook-btn">
+                Follow
             </a>
-
         </div>
 
 
-        <!-- Nizar -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Nizar Police Station
-                </div>
-
-                <div class="username">
-                    Facebook
-                </div>
-
+                <div class="account-name">Nizar Police Station</div>
             </div>
 
             <a
-                class="social-btn facebook-btn"
                 href="https://www.facebook.com/share/1EqwV3k4RE/?mibextid=wwXIfr"
                 target="_blank"
-                rel="noopener noreferrer">
-
-                Visit
-
+                class="follow-btn facebook-btn">
+                Follow
             </a>
-
         </div>
 
 
-        <!-- Kukarmunda -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Kukarmunda Police Station
-                </div>
-
-                <div class="username">
-                    Facebook
-                </div>
-
+                <div class="account-name">Kukarmunda Police Station</div>
             </div>
 
             <a
-                class="social-btn facebook-btn"
                 href="https://www.facebook.com/share/17rXGaQtJU/?mibextid=wwXIfr"
                 target="_blank"
-                rel="noopener noreferrer">
-
-                Visit
-
+                class="follow-btn facebook-btn">
+                Follow
             </a>
-
         </div>
 
     </div>
 
 
-    <div class="divider"></div>
+    <!-- X / Twitter -->
+    <div class="platform">
 
-
-    <!-- =================================================
-         X / TWITTER
-    ================================================= -->
-
-    <div class="platform-section">
-
-        <div class="platform-header twitter-header">
-
-            <span class="platform-icon">
-                𝕏
-            </span>
-
-            <span>
-                Official X (Twitter) Accounts
-            </span>
-
+        <div class="platform-title x-title">
+            𝕏 X / Twitter
         </div>
 
 
-        <!-- Ukai -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Ukai Police Station
-                </div>
-
-                <div class="username">
-                    @PoliceUkai12618
-                </div>
-
+                <div class="account-name">Ukai Police Station</div>
+                <div class="username">@PoliceUkai12618</div>
             </div>
 
             <a
-                class="social-btn twitter-btn"
                 href="https://x.com/PoliceUkai12618"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn x-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Uchchhal -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Uchchhal Police Station
-                </div>
-
-                <div class="username">
-                    @PiUchchhal40631
-                </div>
-
+                <div class="account-name">Uchchhal Police Station</div>
+                <div class="username">@PiUchchhal40631</div>
             </div>
 
             <a
-                class="social-btn twitter-btn"
                 href="https://x.com/PiUchchhal40631"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn x-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Songadh -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Songadh Police Station
-                </div>
-
-                <div class="username">
-                    @PI_Songadh
-                </div>
-
+                <div class="account-name">Songadh Police Station</div>
+                <div class="username">@PI_Songadh</div>
             </div>
 
             <a
-                class="social-btn twitter-btn"
                 href="https://x.com/PI_Songadh"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn x-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Vyara -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Vyara Police Station
-                </div>
-
-                <div class="username">
-                    @VPolicesta63244
-                </div>
-
+                <div class="account-name">Vyara Police Station</div>
+                <div class="username">@VPolicesta63244</div>
             </div>
 
             <a
-                class="social-btn twitter-btn"
                 href="https://x.com/VPolicesta63244"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn x-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Valod -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Valod Police Station
-                </div>
-
-                <div class="username">
-                    @valodhc01
-                </div>
-
+                <div class="account-name">Valod Police Station</div>
+                <div class="username">@valodhc01</div>
             </div>
 
             <a
-                class="social-btn twitter-btn"
                 href="https://x.com/valodhc01"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn x-btn">
                 Follow
-
             </a>
-
         </div>
 
 
-        <!-- Nizar -->
-
-        <div class="account">
-
+        <div class="account-card">
             <div class="account-info">
-
-                <div class="account-name">
-                    Nizar Police Station
-                </div>
-
-                <div class="username">
-                    @policeniza28616
-                </div>
-
+                <div class="account-name">Nizar Police Station</div>
+                <div class="username">@policeniza28616</div>
             </div>
 
             <a
-                class="social-btn twitter-btn"
                 href="https://x.com/policeniza28616?s=21"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                class="follow-btn x-btn">
                 Follow
-
             </a>
-
         </div>
 
     </div>
 
 
-    <!-- =================================================
-         FOOTER
-    ================================================= -->
+    <!-- Footer -->
+    <footer>
 
-    <div class="footer">
-
-        <div class="footer-title">
-            Official Social Media • Tapi District Police
+        <div>
+            <strong>Official Social Media • Tapi District Police</strong>
         </div>
 
         <div>
             Tapi District, Gujarat
         </div>
 
-        <div class="website-link">
-
-            🌐
-
+        <div>
+            Website:
             <a
                 href="https://sharukhmultani.github.io/instagram-follow/"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                Visit Website
-
+                target="_blank">
+                sharukhmultani.github.io/instagram-follow/
             </a>
-
         </div>
 
-        <div class="visitor-counter">
-
-            👁️ Total Visitors:
-
-            <span id="visitorCount">
-                Loading...
-            </span>
-
-        </div>
-
-    </div>
+    </footer>
 
 </div>
-
-</div>
-
-
-<!-- =================================================
-     VISITOR COUNTER
-================================================= -->
-
-<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
-
-<script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-        const visitorElement =
-            document.getElementById("visitorCount");
-
-        try {
-
-            const counter = new Counter({
-                workspace: "tapi-district-police"
-            });
-
-            counter.up("website-visitors")
-
-                .then(function (result) {
-
-                    visitorElement.textContent =
-                        Number(result.value).toLocaleString();
-
-                })
-
-                .catch(function (error) {
-
-                    console.error(
-                        "Visitor counter error:",
-                        error
-                    );
-
-                    visitorElement.textContent =
-                        "Unavailable";
-
-                });
-
-        } catch (error) {
-
-            console.error(
-                "Counter initialization error:",
-                error
-            );
-
-            visitorElement.textContent =
-                "Unavailable";
-        }
-
-    });
-
-</script>
 
 </body>
-
 </html>
+```
